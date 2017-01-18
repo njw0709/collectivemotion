@@ -30,7 +30,7 @@ for k = 3:length(Files)
     disp(strcat('BF OPEN DONE',name)) 
     
     %write data to tif images
-        for i=1:2000
+        for i=1:1000
           disp('SAVING IMAGES')
           disp(i)
           plotname=[filebase_image,strcat(sprintf('%04d',i),'.tif')];
