@@ -6,11 +6,11 @@ addpath /data1/user_data/bacteria/matlabscripts/PIVlab
 addpath /data1/user_data/bacteria/matlabscripts/bfmatlab
 
 %TODO: add list of file names that each screen will run through
-Files = dir(strcat('/data1/user_data/bacteria/cxdfolder/',filepath));
+Files = dir(strcat('/data2/user_data/bacteria/cxdfolder/',filepath));
 
 %or make a list of files
-filebase_image = strcat('/data1/user_data/bacteria/imageoverlaybuffer/',filepath,'/');
-filebase_results=strcat('/data1/user_data/bacteria/results/',filepath,'/');
+filebase_image = strcat('/data2/user_data/bacteria/imageoverlaybuffer/',filepath,'/');
+filebase_results=strcat('/data2/user_data/bacteria/results/',filepath,'/');
 filebase_aviresults=strcat(filebase_results,'movies/');
 filebase_figresults=strcat(filebase_results,'figures/');
 mkdir(filebase_image);
@@ -26,7 +26,7 @@ for k = 3:length(Files)
     command = ['rm ',filebase_image,'*.tif'];
     system(command);
     disp('Cleaned image buffer folder');
-    data = bfopen(strcat('/data1/user_data/bacteria/cxdfolder/',filepath,'/',Files(k).name)); % working
+    data = bfopen(strcat('/data2/user_data/bacteria/cxdfolder/',filepath,'/',Files(k).name)); % working
     disp(strcat('BF OPEN DONE',name)) 
     
     %write data to tif images
