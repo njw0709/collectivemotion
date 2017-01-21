@@ -43,7 +43,7 @@ for k = 3:length(Files)
     PIVlab_commandline; %working!!
     [u_new,v_new] = filter_velocity_angle(u_filt,v_filt,3,15,3,21);
     save(strcat(filebase_results,name,'.mat'));
-    create_histogram(0.1595,u_filt,v_filt,u_new,v_new,filebase_figresults,name);
+    create_histogram(0.1595,u_filt,v_filt,u_new,v_new,filebase_figresults,name,60);
     pivlabmovie(x,y,u_new,v_new,filebase_image,strcat(filebase_aviresults,name),10,1.6)
     pivlabvelspatialcorr(filebase_image,strcat(filebase_aviresults,name),x,y,u_filt,v_filt,2,10)
 %     save(strcat('/data1/user_data/bacteria/testing/','1000imgset.mat'));%strcat(filebase_results,name,'wsp.mat'));
