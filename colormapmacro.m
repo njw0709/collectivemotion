@@ -1,12 +1,12 @@
 %% Create Color map macro
-dirname = '/data2/user_data/bacteria/July29/';
+dirname = '/data2/user_data/bacteria/results/July29/';
 Files = dir(dirname);
 addpath /data1/user_data/bacteria/matlabscripts/PIVlab;
 filebase_image = '/data2/user_data/bacteria/imageoverlaybuffer/July29/';
 filebase_aviresults='/data2/user_data/bacteria/results/July29_avi/';
 
-mkdir(filebase_image);
-mkdir(filebase_aviresults);
+%mkdir(filebase_image);
+%mkdir(filebase_aviresults);
 
 for k = 3:length(Files)
     disp(k);
